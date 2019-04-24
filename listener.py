@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 from flask import Flask
 from flask import request
  
@@ -8,9 +8,9 @@ app = Flask(__name__)
 def JsonHandler():
     if request.is_json:
         content = request.get_json()
-        print "Just got {0} event!".format(content['event_name'])
+        print("Just got {0} event!".format(content['event_name']))
         return 'OK'
     else:
         return 'OK'
  
-app.run(host='0.0.0.0', port= 8888)
+app.run(host='0.0.0.0', port=7888)
