@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  app:
+    build: .
+    ports:
+      - 7888:7888
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "10"
+
+# vim:ts=2:sw=2:et
